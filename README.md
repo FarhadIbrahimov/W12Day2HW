@@ -49,15 +49,77 @@ Follow these steps to set up and run the project:
 
 ### Setting up the File Structure
 
-Create the necessary folders and files for your project.
+_Create the necessary folders and files for your project._
+
+```
+plaintext
+pokemon_app/
+|-- views/
+|   |-- Index.jsx
+|   |-- Show.jsx
+|-- models/
+|   |-- pokemonData.js
+|-- controllers/
+|   |-- pokemonController.js
+|-- routes/
+|   |-- pokemonRoutes.js
+|-- server.js
+|-- .gitignore
+```
+
+### Initializing the Project
+
+_Run the following command to initialize your project and create a package.json file:_
+
+```
+npm init -y
+
+```
 
 ### Installing NPM Packages
 
-Install required NPM packages for your project.
+_Install required NPM packages for your project._
+
+```
+npm install express jsx-view-engine react react-dom
+
+```
 
 ### Setting up the Server
 
-Set up your Express server to listen on a specific port and handle routes.
+_Set up your Express server to listen on a specific port and handle routes._
+
+```
+// server.js
+
+const express = require("express");
+const app = express();
+const PORT = 3000;
+
+// ... (other configurations and middleware)
+
+// Import routes
+const pokemonRoutes = require("./routes/pokemonRoutes");
+
+// Set up view engine
+const jsxEngine = require("jsx-view-engine");
+app.set("view engine", "jsx");
+app.engine("jsx", jsxEngine());
+
+// Use routes
+app.use("/pokemon", pokemonRoutes);
+
+// Default route
+app.get("/", (req, res) => {
+  res.send("Welcome to the Pokemon App!");
+});
+
+// Listen on port
+app.listen(PORT, () => {
+  console.log("Listening on port: " + PORT);
+});
+
+```
 
 ### Setting up the 'Database'
 
