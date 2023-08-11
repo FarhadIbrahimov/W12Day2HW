@@ -49,7 +49,7 @@ Follow these steps to set up and run the project:
 
 ### Setting up the File Structure
 
-_Create the necessary folders and files for your project._
+_Create the necessary folders and files for your project:_
 
 ```
 plaintext
@@ -78,7 +78,7 @@ npm init -y
 
 ### Installing NPM Packages
 
-_Install required NPM packages for your project._
+_Install required NPM packages for your project:_
 
 ```
 npm install express jsx-view-engine react react-dom
@@ -87,7 +87,7 @@ npm install express jsx-view-engine react react-dom
 
 ### Setting up the Server
 
-_Set up your Express server to listen on a specific port and handle routes._
+_Set up your Express server to listen on a specific port and handle routes:_
 
 ```js
 // server.js
@@ -122,7 +122,20 @@ app.listen(PORT, () => {
 
 ### Setting up the 'Database'
 
-Create and export a 'database' containing Pokemon data.
+_Create and export a 'database' containing Pokemon data:_
+
+```js
+const pokemon = [
+  { name: "bulbasaur", img: "http://img.pokemondb.net/artwork/bulbasaur" },
+  { name: "ivysaur", img: "http://img.pokemondb.net/artwork/ivysaur" },
+  { name: "venusaur", img: "http://img.pokemondb.net/artwork/venusaur" },
+  { name: "charmander", img: "http://img.pokemondb.net/artwork/charmander" },
+  { name: "charizard", img: "http://img.pokemondb.net/artwork/charizard" },
+  { name: "squirtle", img: "http://img.pokemondb.net/artwork/squirtle" },
+  { name: "wartortle", img: "http://img.pokemondb.net/artwork/wartortle" },
+];
+module.exports = pokemon;
+```
 
 ### Creating the Index View
 
