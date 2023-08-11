@@ -89,7 +89,7 @@ npm install express jsx-view-engine react react-dom
 
 _Set up your Express server to listen on a specific port and handle routes._
 
-```
+```js
 // server.js
 
 const express = require("express");
@@ -118,7 +118,6 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log("Listening on port: " + PORT);
 });
-
 ```
 
 ### Setting up the 'Database'
