@@ -3,7 +3,7 @@ import React from "react";
 function Index(props) {
   return (
     <div>
-      <h1>Index</h1>
+      <h1>Here is your Pokemon Army!</h1>
       <ul>
         {props.pokemonData.map((pokemon, i) => (
           <li key={i}>
