@@ -1,12 +1,20 @@
 import React from "react";
 
 function Show({ pokemonData }) {
+  const pokemonWithImgExtention = {
+    ...pokemonData,
+    img: `${pokemonData.img}.jpg`,
+  };
   return (
     <div>
       <h1>Show</h1>
-      <p>Name: {pokemonData.name}</p>
+      <p>Name: {pokemonWithImgExtention.name}</p>
       <p>
-        Image: <img src={pokemonData.img} alt={pokemonData.name} />
+        Image:{" "}
+        <img
+          src={pokemonWithImgExtention.img}
+          alt={pokemonWithImgExtention.name}
+        />
       </p>
     </div>
   );
