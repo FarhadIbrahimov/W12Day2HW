@@ -164,13 +164,15 @@ Here's how it works:
 
   - `<a href={`/pokemon/${i}`}>...</a>`: Generates an anchor (`<a>`) element with an `href` attribute that dynamically creates URLs for each Pokémon based on its index `i`. This enables users to click on a Pokémon's name to navigate to its details page.
 
-  To ensure consistent formatting of Pokemon names, we've implemented the `capitalizeFirstLetter` function.
+  To ensure consistent formatting of Pokemon names, we've implemented the `capitalizeFirstLetter` function, stored inside the pokemonControllers.js file
 
-  - `function capitalizeFirstLetter = (string) => {
+  ```js
+  function capitalizeFirstLetter = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
-};
-`
-    This function takes a string as input and returns a new string with the first letter capitalized. Here's how it works:
+  }
+  ```
+
+  This function takes a string as input and returns a new string with the first letter capitalized. Here's how it works:
 
 **Input**: The function accepts a `string` parameter, which is the text to be capitalized.
 
@@ -199,3 +201,7 @@ Create links between the index and show views for seamless navigation.
 This project is a great opportunity to practice setting up routes, rendering views, and working with server-side data. As you complete the requirements and build out the app, you'll gain valuable experience in building dynamic and interactive web applications with Express and server-side rendering.
 
 For more information on the MVC pattern, you can refer to the [Mozilla Developer Network's Glossary on MVC](https://developer.mozilla.org/en-US/docs/Glossary/MVC).
+
+```
+
+```
