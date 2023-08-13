@@ -1,16 +1,20 @@
 import React from "react";
+import { capitalizeFirstLetter } from "../controllers/pokemonController";
 
-function Index(props) {
+function Index({ pokemonData }) {
   return (
     <div>
       <h1>Here is your Pokemon Army!</h1>
       <ul>
-        {props.pokemonData.map((pokemon, i) => (
+        {pokemonData.map((pokemon, i) => (
           <li key={i}>
-            <a href={`/pokemon/${i}`}>{pokemon.name}</a>
+            <a href={`/pokemon/${i}`}>{capitalizeFirstLetter(pokemon.name)}</a>
           </li>
         ))}
       </ul>
+      <form action={"/New"} method="POST">
+        <button>Add New Pokemon</button>
+      </form>
     </div>
   );
 }
