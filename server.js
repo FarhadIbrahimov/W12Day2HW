@@ -15,6 +15,9 @@ app.set("view engine", "jsx");
 // Create the engine and accept files ending in jsx
 app.engine("jsx", jsxEngine());
 
+//A middleware that formats the data into an object we can use on req.body
+app.use(express.urlencoded({ extended: false }));
+
 app.use("/pokemon", pokemonRoutes);
 
 app.get("/", (req, res) => {

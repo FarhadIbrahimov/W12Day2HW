@@ -20,6 +20,9 @@ function Show({ pokemonData }) {
           alt={pokemonWithImgExtention.name}
         />
       </li>
+      <a href={`/pokemon/`}>
+        <button>Back</button>
+      </a>
     </div>
   );
 }

@@ -20,3 +20,9 @@ module.exports.show = (req, res) => {
 module.exports.new = (req, res) => {
   res.render("New");
 };
+
+module.exports.create = (req, res) => {
+  console.log("POST/pokemon");
+  console.log(req.body);
+  res.send("testPost");
+};

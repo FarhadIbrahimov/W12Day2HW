@@ -12,7 +12,7 @@ const pokemonController = require("../controllers/pokemonController");
 
 // router.get("/pokemon/:id", pokemonController.show);
 
-//I>N>D>U>C>E>S (Index, New, Delete, Update, Create, Edit, Show)
+//I.N.D.U.C.E.S (Index, New, Delete, Update, Create, Edit, Show)
 
 // "index" route  // localhost:3000/pokemon
 router.get("/", pokemonController.index);
@@ -28,6 +28,7 @@ router.get("/:indexOfPokemon?", pokemonController.show);
 //'update' route
 
 //'create' route
+router.post("/", pokemonController.create);
 
 // 'edit' route
 

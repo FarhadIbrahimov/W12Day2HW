@@ -12,9 +12,9 @@ function Index({ pokemonData }) {
           </li>
         ))}
       </ul>
-      <form action={"/New"} method="POST">
+      <a href={"/pokemon/New"}>
         <button>Add New Pokemon</button>
-      </form>
+      </a>
     </div>
   );
 }
