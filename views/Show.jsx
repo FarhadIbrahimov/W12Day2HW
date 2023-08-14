@@ -2,7 +2,8 @@ import React from "react";
 import pokemon from "../models/pokemonData";
 import { capitalizeFirstLetter } from "../controllers/pokemonController";
 
-function Show({ pokemonData }) {
+function Show({ pokemonData, index }) {
+  let { name, img } = pokemon;
   const pokemonWithImgExtention = {
     ...pokemonData,
     img: `${pokemonData.img}.jpg`,
@@ -10,7 +11,8 @@ function Show({ pokemonData }) {
 
   return (
     <div>
-      <h1>You have selected {pokemonWithImgExtention.name.toUpperCase()}</h1>
+      <h1> Gotta Catch 'Em All</h1>
+      <h2>You have caught {pokemonWithImgExtention.name.toUpperCase()}</h2>
       <li>Name: {capitalizeFirstLetter(pokemonWithImgExtention.name)}</li>
 
       <li>
@@ -23,6 +25,9 @@ function Show({ pokemonData }) {
       <a href={`/pokemon/`}>
         <button>Back</button>
       </a>
+      {/* <form action={`/pokemon/:${index}`} method="DELETE">
+        <button>Delete</button>
+      </form> */}
     </div>
   );
 }

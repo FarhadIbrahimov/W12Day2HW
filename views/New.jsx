@@ -5,17 +5,22 @@ function New() {
   return (
     <div>
       <form action="/pokemon" method="POST">
-        <h1>New</h1>
-        <label htmlFor="name">Name</label>
+        <h1>New Pokemon</h1>
+        <label htmlFor="name">Name:</label>
+        <br />
         <input type="text" id="name" name="name"></input>
+
+        <br />
+        <br />
         <a href={`/pokemon`}>
           <button>Submit</button>
         </a>
+        <br />
+        <br />
+        <a href={`/pokemon/`}>
+          <button>Back</button>
+        </a>
       </form>
-      <br />
-      <a href={`/pokemon/`}>
-        <button>Back</button>
-      </a>
     </div>
   );
 }

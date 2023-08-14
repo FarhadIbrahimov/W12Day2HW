@@ -10,8 +10,12 @@ module.exports.index = (req, res) => {
 
 module.exports.show = (req, res) => {
   let pokes = pokemonData[req.params.indexOfPokemon];
+
   if (pokes) {
-    res.render("Show", { pokemonData: pokes });
+    res.render("Show", {
+      pokemonData: pokes,
+      index: req.params.indexOfPokemon,
+    });
   } else {
     res.render("Error");
   }
@@ -22,7 +26,22 @@ module.exports.new = (req, res) => {
 };
 
 module.exports.create = (req, res) => {
-  console.log("POST/pokemon");
-  console.log(req.body);
-  res.send("testPost");
+  const newPokemonName = req.body.name.toLowerCase();
+  const newPokemon = {
+    name: newPokemonName,
+    img: `http://img.pokemondb.net/artwork/${newPokemonName}`,
+  };
+
+  console.log(newPokemon);
+
+  pokemonData.push(newPokemon);
+  res.redirect("/pokemon");
 };
+
+// module.exports.destroy = (req, res) => {
+//   console.log("DELETE/pokemon/:indexOfPokemon");
+//   let index = Number(req.params.indexOfPokemon);
+//   pokemonData.splice(index, 1);
+//   res.redirect("/pokemon");
+// };
+module.exports.delete = (req, res) => {};
