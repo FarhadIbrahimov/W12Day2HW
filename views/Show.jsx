@@ -3,31 +3,24 @@ import pokemon from "../models/pokemonData";
 import { capitalizeFirstLetter } from "../controllers/pokemonController";
 
 function Show({ pokemonData, index }) {
-  let { name, img } = pokemon;
-  const pokemonWithImgExtention = {
-    ...pokemonData,
-    img: `${pokemonData.img}.jpg`,
-  };
+  let { name, img, _id } = pokemonData;
 
   return (
     <div>
       <h1> Gotta Catch 'Em All</h1>
-      <h2>You have caught {pokemonWithImgExtention.name.toUpperCase()}</h2>
-      <li>Name: {capitalizeFirstLetter(pokemonWithImgExtention.name)}</li>
+      <h2>You have caught {name}</h2>
+      <li>Name: {name}</li>
 
       <li>
         Image:
-        <img
-          src={pokemonWithImgExtention.img}
-          alt={pokemonWithImgExtention.name}
-        />
+        <img src={`${pokemonData.img}.jpg`} alt={name} />
       </li>
       <a href={`/pokemon/`}>
         <button>Back</button>
       </a>
-      {/* <form action={`/pokemon/:${index}`} method="DELETE">
+      <form action={`/pokemon/${_id}?_method=DELETE`} method="POST">
         <button>Delete</button>
-      </form> */}
+      </form>
     </div>
   );
 }

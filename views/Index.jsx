@@ -8,7 +8,9 @@ function Index({ pokemonData }) {
       <ul>
         {pokemonData.map((pokemon, i) => (
           <li key={i}>
-            <a href={`/pokemon/${i}`}>{capitalizeFirstLetter(pokemon.name)}</a>
+            <a href={`/pokemon/${pokemon._id}`}>
+              {capitalizeFirstLetter(pokemon.name)}
+            </a>
           </li>
         ))}
       </ul>

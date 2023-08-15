@@ -13,7 +13,7 @@ router.get("/", pokemonController.index);
 router.get("/New", pokemonController.new);
 
 //'destroy' route
-router.delete("/:indexOfPokemon");
+router.delete("/:indexOfPokemon", pokemonController.destroy);
 
 //'update' route
 
@@ -23,6 +23,6 @@ router.post("/", pokemonController.create);
 // 'edit' route
 
 //"show"  route   //localhost:3000/pokemon/:indexOfPokemon
-router.get("/:indexOfPokemon?", pokemonController.show);
+router.get("/:indexOfPokemon", pokemonController.show);
 
 module.exports = router;
