@@ -1,6 +1,5 @@
 import React from "react";
 import pokemon from "../models/pokemonData";
-import { capitalizeFirstLetter } from "../controllers/pokemonController";
 
 function Show({ pokemonData, index }) {
   let { name, img, _id } = pokemonData;
@@ -8,8 +7,8 @@ function Show({ pokemonData, index }) {
   return (
     <div>
       <h1> Gotta Catch 'Em All</h1>
-      <h2>You have caught {name}</h2>
-      <li>Name: {name}</li>
+      <h2>You have caught {name.toUpperCase()}</h2>
+      <li>Name: {name.toUpperCase()}</li>
 
       <li>
         Image:

@@ -1,5 +1,5 @@
 import React from "react";
-import { capitalizeFirstLetter } from "../controllers/pokemonController";
+import { CAP } from "../controllers/pokemonController";
 
 function Index({ pokemonData }) {
   return (
@@ -8,9 +8,7 @@ function Index({ pokemonData }) {
       <ul>
         {pokemonData.map((pokemon, i) => (
           <li key={i}>
-            <a href={`/pokemon/${pokemon._id}`}>
-              {capitalizeFirstLetter(pokemon.name)}
-            </a>
+            <a href={`/pokemon/${pokemon._id}`}>{CAP(pokemon.name)}</a>
           </li>
         ))}
       </ul>

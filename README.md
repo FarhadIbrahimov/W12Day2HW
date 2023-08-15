@@ -188,13 +188,11 @@ Here's how it works:
 
 This function is crucial for presenting a consistent and visually appealing format for Pokemon names, enhancing the user experience throughout the application.
 
-### Setting up the Show Route
 
-Set up a route to display individual Pokemon details.
 
 ### Linking Index and Show Views
 
-Create links between the index and show views for seamless navigation.
+Created links between the index and show views for seamless navigation.
 
 ## Conclusion
 

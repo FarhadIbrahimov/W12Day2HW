@@ -2,7 +2,7 @@ const pokemonData = require("../models/pokemonData"); // Here you are requiring 
 
 const PokemonDB = require("../models/PokemonDB");
 
-module.exports.capitalizeFirstLetter = (string) => {
+module.exports.CAP = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
